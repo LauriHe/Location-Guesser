@@ -1,0 +1,183 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.material-symbols-outlined {
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+@media only screen and (min-width: 1465px){
+  .noMap{
+  height: 5% !important;
+  margin-bottom: 2em;
+  }
+}
+
+#container {
+  width: 35%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#show-map-button, #back-to-start-button{
+  width: 3em;
+  height: 3em;
+  position: relative;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  border: 0;
+  border-radius: 3em;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  background-color: rgba(0, 0, 0, 0.558);
+}
+#show-map-span, #back-to-start-span{
+  display: block;
+  margin: 0 auto;
+}
+#show-map-button:hover, #back-to-start-button:hover{
+  background-color: rgba(0, 0, 0, 0.899);
+}
+
+#guess-button{
+  width: 8em;
+  height: 3em;
+  position: relative;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  border: 0;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  background-color: rgba(66, 167, 61, 0.722);
+}
+#guess-button:hover{
+  background-color: rgb(60, 190, 53);
+}
+
+#map{
+  width: 100%;
+  height: 20em;
+  border-radius: 10px;
+}
+
+.answer-map{
+  width: 100%;
+  height: 100%;
+  left: 93%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#pano {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#bg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.789);
+  z-index: 20;
+}
+
+#distance-container{
+  position: absolute;
+  left: 25%;
+  top: 7em;
+  width: 50%;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-color: rgba(255, 255, 255, 0.095);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.163), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-family: 'Comfortaa', cursive;
+}
+
+#distance-text{
+  text-align: center;
+  margin: 1em;
+  font-size: 2em;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+#continue-button{
+  display: block;
+  margin: auto;
+  width: 9em;
+  height: 3em;
+  margin: 2em auto;
+  position: relative;
+  border: 0;
+  border-radius: 6px;
+  font-size: medium;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  background-color: rgba(211, 211, 211, 0.608);
+}
+
+#continue-button:hover {
+  background-color: rgb(112, 201, 145);
+}
+
+#score-container{
+  display: block;
+  position: relative;
+  margin: 1em auto;
+  width: 80%;
+  height: 2em;
+  background-color: rgba(211, 211, 211, 0.608);
+  border-radius: 10px;
+}
+
+#score-bar{
+  height: 2em;
+  width: 0%;
+  background-color: rgb(112, 201, 145);
+  border-radius: 10px;
+}
+
+#score-text{
+  left: 0;
+  right: 0;
+  top: -0.5em;
+  text-align: center;
+  color: white;
+  position: absolute;
+}
+
+.unavailable{
+  background-color: rgba(161, 161, 161, 0.7) !important;
+  color: rgb(56, 56, 56) !important;
+}
+.unavailable:hover{
+  background-color: rgba(161, 161, 161, 0.7) !important;
+}
+
+.inactive{
+  display: none;
+}
+
+.active{
+  display: block;
+}
