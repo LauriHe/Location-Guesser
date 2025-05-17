@@ -98,8 +98,9 @@ function initialize() {
             pitch: 0,
           },
         });
-        correctAnswers.push(panormamaLocation);
-        location = panormamaLocation;
+        const correctLocation = { lat: streetViewPanoramaData.location.latLng.lat(), lng: streetViewPanoramaData.location.latLng.lng() };
+        correctAnswers.push(correctLocation);
+        location = correctLocation;
         console.log('It took ' + (panoramaTries + 1) + ' tries to find panorama');
       } else {
         panoramaTries++;
@@ -227,8 +228,9 @@ function initialize() {
       mapElement.classList.add('answer-map');
       const score = calculateScore(distance);
       drawCorrectAnswer(location, score);
-      if (round < 5) {
+      if (round < 6) {
         gameScore += score;
+        console.log('Game score: ' + gameScore);
       }
       distanceText.textContent = 'Distance to location: ' + distance + ' m';
       moveScoreBar(score);
