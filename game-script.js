@@ -93,6 +93,7 @@ function initialize() {
         const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
           position: panormamaLocation,
           disableDefaultUI: true,
+          showRoadLabels: false,
           pov: {
             heading: 0,
             pitch: 0,
@@ -227,6 +228,7 @@ function initialize() {
       distanceContainer.classList.add('active');
       mapElement.classList.add('answer-map');
       const score = calculateScore(distance);
+      answers.push(markerCoordinates);
       drawCorrectAnswer(location, score);
       if (round < 6) {
         gameScore += score;
