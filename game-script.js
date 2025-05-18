@@ -244,7 +244,7 @@ function initialize() {
 
   continueButton.addEventListener('click', () => {
     answers.push(markerCoordinates);
-    console.log('Answers: ' + answers.join(', '));
+    console.log('Answers: ' + JSON.stringify(answers));
     if (round < 5) {
       map.setCenter(mapCenter);
       map.setZoom(10);
