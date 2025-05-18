@@ -243,6 +243,8 @@ function initialize() {
   });
 
   continueButton.addEventListener('click', () => {
+    answers.push(markerCoordinates);
+    console.log('Answers: ' + answers);
     if (round < 5) {
       map.setCenter(mapCenter);
       map.setZoom(10);
@@ -264,7 +266,6 @@ function initialize() {
       guessButton.classList.add('active');
       backToStartButton.classList.add('active');
       const distance = calculateDistance(location, markerCoordinates);
-      answers.push(markerCoordinates);
       background.classList.remove('active');
       background.classList.add('inactive');
       distanceContainer.classList.remove('active');
@@ -276,7 +277,6 @@ function initialize() {
       panoramaTries = 0;
       round++;
     } else {
-      answers.push(markerCoordinates);
       sessionStorage.setItem('gameScore', gameScore);
       sessionStorage.setItem('correctAnswers', JSON.stringify(correctAnswers));
       sessionStorage.setItem('answers', JSON.stringify(answers));
