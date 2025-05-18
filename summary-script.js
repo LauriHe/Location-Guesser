@@ -74,7 +74,7 @@ function initMap() {
     let lineCoordinates = [];
     lineCoordinates.push(answers[i], correctAnswers[i]);
 
-    line = new google.maps.Polyline({
+    const line = new google.maps.Polyline({
       path: lineCoordinates,
       geodesic: true,
       strokeColor: '#000000',
