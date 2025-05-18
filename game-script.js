@@ -243,8 +243,8 @@ function initialize() {
   });
 
   continueButton.addEventListener('click', () => {
-    answers.push(markerCoordinates);
-    console.log('Answers: ' + JSON.stringify(answers));
+    answers.push(markers[mapers.length - 1].getPosition());
+    console.log('Answers: ' + JSON.stringify(markers));
     if (round < 5) {
       map.setCenter(mapCenter);
       map.setZoom(10);
