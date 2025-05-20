@@ -243,7 +243,7 @@ function initialize() {
   });
 
   continueButton.addEventListener('click', () => {
-    answers.push(markers[markers.length - 1].getPosition());
+    answers.push(markers[markers.length - 2].getPosition());
     if (round < 5) {
       map.setCenter(mapCenter);
       map.setZoom(10);
