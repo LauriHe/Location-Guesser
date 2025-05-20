@@ -63,6 +63,7 @@ function initMap() {
   for (let i = 0; i < correctAnswers.length; i++) {
     const marker = new google.maps.Marker({
       position: answers[i],
+      label: i + 1,
       map: map,
     });
     const flagMarker = new google.maps.Marker({
