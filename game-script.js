@@ -243,7 +243,7 @@ function initialize() {
   });
 
   continueButton.addEventListener('click', () => {
-    answers.push(markers[mapers.length - 1].getPosition());
+    answers.push(markers[markers.length - 1].getPosition());
     console.log('Answers: ' + JSON.stringify(markers));
     if (round < 5) {
       map.setCenter(mapCenter);
